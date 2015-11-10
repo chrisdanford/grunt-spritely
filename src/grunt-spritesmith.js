@@ -66,7 +66,7 @@ module.exports = function (grunt) {
       cssTemplate = data.cssTemplate,
       that = this;
 
-    // Verify all properties are here 
+    // Verify all properties are here
     if (this.files.length === 0) {
       return grunt.fatal("grunt.sprite requires files.");
     }
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
       // Run through spritesmith
       var spritesmithParams = {
         'src': file.src,
-        'engine': data.engine || 'auto',
+        'engine': data.engine,
         'algorithm': data.algorithm || 'top-down',
         'padding': data.padding || 0,
         'engineOpts': data.engineOpts || {},
